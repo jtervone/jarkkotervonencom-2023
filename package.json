@@ -8,7 +8,6 @@
     "name": "Jarkko Tervonen",
     "url": "https://jarkkotervonen.com"
   },
-  "main": "",
   "scripts": {
     "clean": "rm dist/*",
     "watch": "parcel watch src/main.js",
@@ -18,17 +17,7 @@
     "lint": "npm run stylelint && npm run eslint"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "autoprefixer": "^10.4.0",
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "node-sass": "^8.0.0",
-    "parcel-bundler": "^1.8.1",
-    "prettier": "^2.5.1",
-    "sanitize.css": "^13.0.0",
-    "sass": "^1.45.1",
-    "stylelint": "^14.2.0"
+    "parcel": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3"
   }
 }
