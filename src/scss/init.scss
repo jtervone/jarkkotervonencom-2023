@@ -285,12 +285,14 @@ body {
   }
 
   nav.pagination {
+    display: flex;
+    justify-content: center;
     padding: 2rem 0;
     border-top: solid 1px #526980;
 
     .page-numbers {
       display: inline-flex;
-      padding: 0 0.3rem;
+      padding: 0.5rem;
       margin-right: 1rem;
 
       &:last-child {
