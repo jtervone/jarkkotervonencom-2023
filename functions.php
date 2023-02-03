@@ -15,9 +15,9 @@ add_theme_support("post-thumbnails");
  * @return string (Maybe) modified "read more" excerpt string.
  */
 function wpdocs_excerpt_more( $more ) {
-  if (!is_single() ) {
+  if (!is_single()) {
     $more = sprintf(
-      "<a class=\"read-more\" href=\"%1$s\">%2$s</a>",
+      '<a class="read-more" href="%1$s">%2$s</a>',
       get_permalink(get_the_ID()),
       __("Read More", "textdomain")
     );
