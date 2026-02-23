@@ -8,34 +8,38 @@ if (has_post_thumbnail()) {
 
 ?>
 
-<h1><?php the_title(); ?></h1>
+<article>
 
-<?php if (get_post_type() !== 'page') : ?>
-  <div class="details">
-    <time class="post-date" datetime="<?php the_time("Y-m-d") ?>">
-      <?php the_time("j.n.Y") ?>
-    </time>
-    <p>Aiheet: <?php echo get_the_category_list(", "); ?></p>
+  <h1><?php the_title(); ?></h1>
+
+  <?php if (get_post_type() !== 'page') : ?>
+    <div class="details">
+      <time class="post-date" datetime="<?php the_time("Y-m-d") ?>">
+        <?php the_time("j.n.Y") ?>
+      </time>
+      <p>Aiheet: <?php echo get_the_category_list(", "); ?></p>
+    </div>
+  <?php endif; ?>
+
+  <?php the_content(__("Continue reading")); ?>
+
+  <?php if (get_the_tag_list()) : ?>
+    <p class="tags">
+      Tunnisteet: <?php echo get_the_tag_list(); ?>
+    </p>
+  <?php endif; ?>
+
+  <div>
+    <?php
+
+    if (comments_open() || get_comments_number()) {
+      comments_template();
+    }
+
+    ?>
   </div>
-<?php endif; ?>
 
-<?php the_content(__("Continue reading")); ?>
-
-<?php if (get_the_tag_list()) : ?>
-  <p class="tags">
-    Tunnisteet: <?php echo get_the_tag_list(); ?>
-  </p>
-<?php endif; ?>
-
-<div>
-  <?php
-
-  if (comments_open() || get_comments_number()) {
-    comments_template();
-  }
-
-  ?>
-</div>
+</article>
 
 <div class="author">
   <p>

@@ -168,6 +168,10 @@ body {
 
     p {
       color: $text-main-color;
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
 

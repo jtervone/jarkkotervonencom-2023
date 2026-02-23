@@ -49,7 +49,7 @@
 global $wp_query;
 
 if ($wp_query->max_num_pages > 1) {
-  echo "<nav role=\"navigation\" class=\"pagination\">";
+  echo "<nav class=\"pagination\">";
   echo paginate_links([
     "prev_text" => "← EDELLINEN",
     "next_text" => "SEURAAVA →",
